@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hak Kimpheng - CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome & Devicon for high-quality technology icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <!-- Libraries for download functionality -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+        }
+        
+        .section-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, #4f46e5, #06b6d4);
+            border-radius: 2px;
+        }
+
+        @media print {
+            body { background: white; color: #1e293b; }
+            .no-print { display: none; }
+            .print-break { page-break-inside: avoid; }
+            .shadow-custom { box-shadow: none !important; border: 1px solid #e2e8f0; }
+        }
+
+        .shadow-custom {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased py-12 px-4 md:px-0">
+
+    <!-- Download Buttons Bar -->
+    <div class="no-print fixed top-4 right-4 z-50 flex gap-2">
+        <button onclick="downloadPNG()" class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg shadow-lg transition font-medium text-sm">
+            <i class="fa-solid fa-image"></i>Download PNG
+        </button>
+        <button onclick="downloadPDF()" class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg shadow-lg transition font-medium text-sm">
+            <i class="fa-solid fa-file-pdf"></i>Download PDF
+        </button>
+    </div>
+
+    <!-- CV Premium Wrapper -->
+    <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-custom border border-slate-100 overflow-hidden">
+        
+        <!-- Top Tech-Accent Bar -->
+        <div class="h-2 w-full bg-gradient-to-r from-indigo-600 via-violet-500 to-cyan-500"></div>
+
+        <div class="p-8 md:p-12">
+            <!-- Header Layout -->
+            <div class="flex flex-col-reverse md:flex-row md:justify-between md:items-center gap-8 pb-8 border-b border-slate-100">
+                <div class="flex-1 text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">HAK KIMPHENG</h1>
+                    <p class="text-sm font-semibold text-indigo-600 mt-2 uppercase tracking-widest flex items-center justify-center md:justify-start gap-2">
+                        <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                        Software Development Student & Aspiring Engineer
+                    </p>
+                    
+                    <!-- Contact Grid -->
+                    <div class="mt-6 text-xs font-medium text-slate-600 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl">
+                        <div class="flex items-center gap-2.5 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100/80">
+                            <i class="fa-solid fa-location-dot text-indigo-600 text-sm"></i>
+                            <span>Phnom Penh, Cambodia</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100/80">
+                            <i class="fa-solid fa-phone text-indigo-600 text-sm"></i>
+                            <span>+855 11 682 300</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-indigo-50/40 px-3 py-2 rounded-lg border border-indigo-100/50">
+                            <i class="fa-brands fa-telegram text-indigo-600 text-sm"></i>
+                            <a href="https://t.me/kimphengHak" target="_blank" class="hover:text-indigo-700 transition">@kimphengHak</a>
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-slate-50 px-3 py-2 rounded-lg border border-slate-100/80">
+                            <i class="fa-solid fa-envelope text-indigo-600 text-sm"></i>
+                            <a href="mailto:hakkimpheng12@gmail.com" class="hover:text-indigo-600 transition">hakkimpheng12@gmail.com</a>
+                        </div>
+                        <div class="sm:col-span-2 flex items-center gap-2.5 bg-slate-900 text-slate-200 px-3 py-2 rounded-lg">
+                            <i class="fa-brands fa-github text-cyan-400 text-sm"></i>
+                            <a href="https://github.com/kimpheng369" target="_blank" class="hover:text-cyan-300 transition font-mono">github.com/kimpheng369</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile Image Frame -->
+                <div class="flex justify-center md:block">
+                    <div class="p-1 bg-gradient-to-tr from-indigo-500 to-cyan-400 rounded-full shadow-md">
+                        <img src="../assets/avatar.jpg" alt="Hak Kimpheng" class="w-32 h-32 md:w-36 md:h-36 rounded-full object-cover bg-white">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Summary -->
+            <div class="mt-8">
+                <h2 class="section-heading relative text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2 pb-1">
+                    <i class="fa-solid fa-terminal text-indigo-600"></i>Executive Profile
+                </h2>
+                <p class="text-sm text-slate-600 mt-4 leading-relaxed text-justify font-normal">
+                    Dedicated Software Development student with a strong foundation in mobile application development, full-stack backend systems, and software engineering principles. Experienced in architecting and delivering academic and personal projects utilizing modern frameworks like Laravel, Django, and the Android SDK (Kotlin/Java). Proven ability to write clean, efficient, and maintainable code, backed by an exceptional academic track record and a wide array of technical cloud and security certifications. A fast learner and critical problem-solver who excels both in independent development environments and collaborative software teams.
+                </p>
+            </div>
+
+            <!-- Dynamic Split Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                
+                <!-- Column 1: Academic & Language Info -->
+                <div class="md:col-span-1 space-y-6">
+                    <div>
+                        <h2 class="section-heading relative text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2 pb-1">
+                            <i class="fa-solid fa-graduation-cap text-indigo-600"></i>Education
+                        </h2>
+                        <div class="mt-4 bg-slate-50/60 p-4 rounded-xl border border-slate-100">
+                            <h3 class="text-sm font-bold text-slate-900">IT STEP Academy</h3>
+                            <p class="text-xs text-indigo-600 font-semibold mt-0.5">Software Development</p>
+                            <div class="flex items-center gap-1.5 text-[11px] text-slate-500 mt-2">
+                                <i class="fa-regular fa-calendar"></i>
+                                <span>Graduation Focus: 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="section-heading relative text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2 pb-1">
+                            <i class="fa-solid fa-layer-group text-indigo-600"></i>Core Syllabus
+                        </h2>
+                        <ul class="mt-4 text-xs text-slate-600 space-y-2">
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Object-Oriented Programming</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Android App Architecture</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Full-Stack Web Ecosystems</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Relational Databases (DBMS)</li>
+                            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>Data Structures & Algorithms</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="section-heading relative text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2 pb-1">
+                            <i class="fa-solid fa-globe text-indigo-600"></i>Languages
+                        </h2>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-slate-100 text-slate-700 rounded-md border border-slate-200/60">Khmer (Native)</span>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-md border border-indigo-100/50">English (Professional)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 & 3: Master Tech Skills Stack with Icons -->
+                <div class="md:col-span-2">
+                    <h2 class="section-heading relative text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2 pb-1">
+                        <i class="fa-solid fa-cubes text-indigo-600"></i>Technical Stack Matrix
+                    </h2>
+                    
+                    <div class="mt-4 space-y-3.5">
+                        <!-- Core Languages -->
+                        <div class="p-3 bg-slate-50/40 rounded-xl border border-slate-100/80">
+                            <span class="text-xs font-bold text-slate-900 uppercase tracking-wider block text-indigo-600 mb-2">Core Languages</span>
+                            <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-700">
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-java-plain colored text-sm"></i>Java</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-kotlin-plain colored text-sm"></i>Kotlin</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-python-plain colored text-sm"></i>Python</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-php-plain colored text-sm"></i>PHP</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-cplusplus-plain colored text-sm"></i>C++</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-csharp-plain colored text-sm"></i>C#</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-javascript-plain colored text-sm"></i>JavaScript</span>
+                            </div>
+                        </div>
+
+                        <!-- Frameworks & APIs -->
+                        <div class="p-3 bg-slate-50/40 rounded-xl border border-slate-100/80">
+                            <span class="text-xs font-bold text-slate-900 uppercase tracking-wider block text-indigo-600 mb-2">Frameworks & APIs</span>
+                            <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-700">
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-android-plain colored text-sm"></i>Android SDK</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-laravel-original colored text-sm"></i>Laravel</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-django-plain colored text-sm"></i>Django</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="fa-solid fa-cloud-arrow-down text-cyan-600 text-[11px]"></i>RESTful APIs</span>
+                            </div>
+                        </div>
+
+                        <!-- Android Ecosystem -->
+                        <div class="p-3 bg-slate-50/40 rounded-xl border border-slate-100/80">
+                            <span class="text-xs font-bold text-slate-900 uppercase tracking-wider block text-indigo-600 mb-2">Android Architecture Pattern</span>
+                            <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-700">
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="fa-solid fa-sitemap text-slate-500 text-[11px]"></i>MVVM Architecture</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm">ViewModel</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm">View Binding</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm">LiveData</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm">Navigation Component</span>
+                            </div>
+                        </div>
+
+                        <!-- Environments & Data -->
+                        <div class="p-3 bg-slate-50/40 rounded-xl border border-slate-100/80">
+                            <span class="text-xs font-bold text-slate-900 uppercase tracking-wider block text-indigo-600 mb-2">Environments & Data</span>
+                            <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-700">
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-git-plain colored text-sm"></i>Git</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-github-original text-slate-900 text-sm"></i>GitHub</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-mysql-plain colored text-sm"></i>MySQL</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-sqlite-plain colored text-sm"></i>SQLite</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-androidstudio-plain colored text-sm"></i>Android Studio</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-vscode-plain colored text-sm"></i>VS Code</span>
+                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="devicon-amazonwebservices-plain colored text-sm"></i>AWS Cloud</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engineering Projects Portfolio -->
+            <div class="mt-10 print-break">
+                <h2 class="section-heading relative text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2 pb-1">
+                    <i class="fa-solid fa-folder-closed text-indigo-600"></i>Selected Technical Projects
+                </h2>
+                
+                <div class="mt-5 space-y-5">
+                    <!-- Project card 1 -->
+                    <div class="group p-5 bg-slate-50/40 rounded-xl border border-slate-150 hover:border-indigo-200 transition-all">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                <i class="fa-solid fa-network-wired text-indigo-500"></i>Mini School System
+                            </h3>
+                            <a href="https://github.com/kimpheng369/Mini_School_system" target="_blank" class="text-xs text-indigo-600 font-semibold font-mono bg-indigo-50 px-2.5 py-1 rounded-md hover:bg-indigo-100 transition flex items-center gap-1">
+                                <i class="fa-brands fa-github"></i>Source Repository
+                            </a>
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-1 font-semibold tracking-wide">Technologies: Python, Django, MySQL</p>
+                        <ul class="mt-3 text-xs text-slate-600 list-none space-y-1.5 pl-0">
+                            <li class="flex items-start gap-2"><span class="text-indigo-500 mt-0.5">▪</span> Built an engineering-focused school management solution utilizing the scalable Django framework layout.</li>
+                            <li class="flex items-start gap-2"><span class="text-indigo-500 mt-0.5">▪</span> Deployed complete administrative modules with advanced CRUD control parameters for student and course management.</li>
+                            <li class="flex items-start gap-2"><span class="text-indigo-500 mt-0.5">▪</span> Formulated highly optimized structural relational databases to securely store systemic academic logging profiles.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project card 2 -->
+                    <div class="group p-5 bg-slate-50/40 rounded-xl border border-slate-150 hover:border-indigo-200 transition-all">
+                        <div class="flex justify-between items-start flex-wrap gap-2">
+                            <h3 class="text-sm font-bold text-slate-900 flex items-center gap-2">
+                                <i class="fa-brands fa-android text-emerald-500"></i>Android Mobile Application Ecosystem
+                            </h3>
+                            <span class="text-[11px] font-bold tracking-wider text-slate-400 uppercase bg-slate-100 px-2.5 py-1 rounded-md">Mobile Engineering</span>
+                        </div>
+                        <p class="text-[11px] text-slate-500 mt-1 font-semibold tracking-wide">Technologies: Kotlin, Java, Android SDK</p>
+                        <ul class="mt-3 text-xs text-slate-600 list-none space-y-1.5 pl-0">
+                            <li class="flex items-start gap-2"><span class="text-indigo-500 mt-0.5">▪</span> Programmed robust standalone Android deployment modules aligning strictly to structural clean coding parameters.</li>
+                            <li class="flex items-start gap-2"><span class="text-indigo-500 mt-0.5">▪</span> Mapped dynamic networking threads accessing third-party REST API endpoints using modern MVVM design methodologies.</li>
+                            <li class="flex items-start gap-2"><span class="text-indigo-500 mt-0.5">▪</span> Handled complex lifecycle operations flawlessly by implementing custom configurations for View Binding and LiveData fields.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Certifications Showcase -->
+            <div class="mt-10 print-break">
+                <h2 class="section-heading relative text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2 pb-1">
+                    <i class="fa-solid fa-award text-indigo-600"></i>Verified Industry Credentials
+                </h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-5 text-xs">
+                    <!-- AWS Block -->
+                    <div class="p-4 bg-slate-50/80 rounded-xl border border-slate-100">
+                        <div class="flex items-center gap-2 border-b border-slate-200/60 pb-2 mb-2">
+                            <i class="fa-brands fa-aws text-amber-500 text-lg"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider">Cloud Platforms</span>
+                        </div>
+                        <ul class="space-y-1.5 text-slate-600 font-medium list-none pl-0">
+                            <li class="flex items-start gap-1"><span class="text-amber-500">•</span> AWS Cloud Practitioner</li>
+                            <li class="flex items-start gap-1"><span class="text-amber-500">•</span> AWS Technical Essentials</li>
+                        </ul>
+                    </div>
+
+                    <!-- Coursera Block -->
+                    <div class="p-4 bg-slate-50/80 rounded-xl border border-slate-100">
+                        <div class="flex items-center gap-2 border-b border-slate-200/60 pb-2 mb-2">
+                            <i class="fa-solid fa-shield-halved text-blue-600 text-base"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider">Cybersecurity</span>
+                        </div>
+                        <ul class="space-y-1.5 text-slate-600 font-medium list-none pl-0">
+                            <li class="flex items-start gap-1"><span class="text-blue-500">•</span> Cybersecurity Careers (IBM)</li>
+                            <li class="flex items-start gap-1"><span class="text-blue-500">•</span> Technical Support (Google)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Udemy Block -->
+                    <div class="p-4 bg-slate-50/80 rounded-xl border border-slate-100">
+                        <div class="flex items-center gap-2 border-b border-slate-200/60 pb-2 mb-2">
+                            <i class="fa-solid fa-code-compare text-purple-600 text-base"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider">Core Frameworks</span>
+                        </div>
+                        <ul class="space-y-1.5 text-slate-600 font-medium list-none pl-0">
+                            <li class="truncate"><span class="text-purple-500">•</span> C, C++, PHP, & Java Guide</li>
+                            <li class="truncate"><span class="text-purple-500">•</span> Full HTML, CSS, JS & jQuery</li>
+                            <li class="truncate"><span class="text-purple-500">•</span> Python Programming Bootcamp</li>
+                            <li class="truncate"><span class="text-purple-500">•</span> NMAP Mastery Framework</li>
+                            <li class="truncate"><span class="text-purple-500">•</span> Real NMAP Network Exploits</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Floating Print Button (Hidden during Print) -->
+    <div class="fixed bottom-6 right-6 no-print z-50">
+        <button onclick="window.print()" class="flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
+            <i class="fa-solid fa-print"></i>
+            <span>Print or Save PDF</span>
+        </button>
+    </div>
+
+    <script>
+        // Download CV as PNG
+        async function downloadPNG() {
+            const cvElement = document.querySelector('.max-w-4xl');
+            const button = event.target.closest('button');
+            button.disabled = true;
+            button.textContent = 'Generating PNG...';
+
+            try {
+                const canvas = await html2canvas(cvElement, {
+                    scale: 2,
+                    useCORS: true,
+                    logging: false,
+                    backgroundColor: '#ffffff',
+                    windowHeight: cvElement.scrollHeight
+                });
+                
+                const image = canvas.toDataURL('image/png');
+                const link = document.createElement('a');
+                link.href = image;
+                link.download = 'Hak_Kimpheng_CV.png';
+                link.click();
+            } catch (error) {
+                console.error('Error generating PNG:', error);
+                alert('Error generating PNG. Please try again.');
+            } finally {
+                button.disabled = false;
+                button.innerHTML = '<i class="fa-solid fa-image"></i>Download PNG';
+            }
+        }
+
+        // Download CV as PDF
+        async function downloadPDF() {
+            const cvElement = document.querySelector('.max-w-4xl');
+            const button = event.target.closest('button');
+            button.disabled = true;
+            button.textContent = 'Generating PDF...';
+
+            try {
+                const options = {
+                    margin: 10,
+                    filename: 'Hak_Kimpheng_CV.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2, useCORS: true, logging: false },
+                    jsPDF: { orientation: 'portrait', unit: 'mm', format: 'a4' }
+                };
+                
+                html2pdf().set(options).from(cvElement).save();
+            } catch (error) {
+                console.error('Error generating PDF:', error);
+                alert('Error generating PDF. Please try again.');
+            } finally {
+                button.disabled = false;
+                button.innerHTML = '<i class="fa-solid fa-file-pdf"></i>Download PDF';
+            }
+        }
+    </script>
+</body>
+</html>
