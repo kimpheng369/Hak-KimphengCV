@@ -1721,18 +1721,144 @@ ul {
   }
 }
 
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 36px;
+@media (max-width: 640px) {
+  body {
+    font-size: 13px;
   }
-  
+
+  h1, .hero-title {
+    font-size: 28px !important;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+
+  h3 {
+    font-size: 16px !important;
+  }
+
+  p, li, span {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .section-padding {
+    padding: 60px 0;
+  }
+
+  .hero-grid {
+    gap: 24px;
+  }
+
   .avatar-frame {
-    width: 260px;
-    height: 260px;
+    width: 200px;
+    height: 200px;
   }
-  
+
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 10px 16px !important;
+    font-size: 12px !important;
+  }
+
+  .nav-menu {
+    width: 100vw;
+    padding: 80px 20px;
+  }
+
+  .additional-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
   .other-certs-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-container {
+    padding: 32px 16px;
+  }
+
+  .contact-heading {
+    font-size: 22px;
+  }
+
+  .skill-bar {
+    height: 4px;
+  }
+
+  .card-title-small {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  h1, .hero-title {
+    font-size: 24px !important;
+  }
+
+  h2 {
+    font-size: 16px !important;
+  }
+
+  h3 {
+    font-size: 14px !important;
+  }
+
+  p, li, span {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0 8px;
+  }
+
+  .section-padding {
+    padding: 40px 0;
+  }
+
+  .avatar-frame {
+    width: 160px;
+    height: 160px;
+  }
+
+  .btn {
+    padding: 8px 12px !important;
+    font-size: 11px !important;
+  }
+
+  .hero-actions {
+    gap: 8px;
+  }
+
+  .nav-menu {
+    padding: 80px 16px;
+  }
+
+  .other-certs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hint-content span {
+    font-size: 12px;
+  }
+
+  .hint-content p {
+    font-size: 9px;
   }
 }
 

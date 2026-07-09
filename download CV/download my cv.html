@@ -39,17 +39,53 @@
         .shadow-custom {
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
         }
+
+        /* Mobile optimization */
+        @media (max-width: 640px) {
+            body { 
+                font-size: 14px;
+                padding: 8px;
+            }
+            .max-w-4xl {
+                border-radius: 8px;
+            }
+            h1 {
+                font-size: 28px !important;
+                line-height: 1.2;
+            }
+            h2 {
+                font-size: 13px !important;
+            }
+            p, li, span {
+                font-size: 12px;
+                line-height: 1.4;
+            }
+            .no-print {
+                bottom: 8px !important;
+                right: 8px !important;
+                gap: 6px !important;
+            }
+            .no-print button {
+                padding: 8px 12px !important;
+                font-size: 11px !important;
+                flex: 1;
+                min-width: 90px;
+            }
+            .no-print i {
+                display: none;
+            }
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased py-12 px-4 md:px-0">
+<body class="bg-slate-50 text-slate-800 antialiased py-8 px-3 sm:py-12 sm:px-4 md:px-0">
 
     <!-- Download Buttons Bar -->
-    <div class="no-print fixed top-4 right-4 z-50 flex gap-2">
-        <button onclick="downloadPNG()" class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg shadow-lg transition font-medium text-sm">
-            <i class="fa-solid fa-image"></i>Download PNG
+    <div class="no-print fixed bottom-4 left-4 right-4 z-50 flex gap-2 sm:bottom-auto sm:top-4 sm:right-4 sm:left-auto">
+        <button onclick="downloadPNG()" class="flex-1 sm:flex-none flex items-center justify-center sm:justify-between gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-3 sm:px-4 py-2 rounded-lg shadow-lg transition font-medium text-xs sm:text-sm">
+            <i class="fa-solid fa-image hidden sm:inline"></i><span>PNG</span>
         </button>
-        <button onclick="downloadPDF()" class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg shadow-lg transition font-medium text-sm">
-            <i class="fa-solid fa-file-pdf"></i>Download PDF
+        <button onclick="downloadPDF()" class="flex-1 sm:flex-none flex items-center justify-center sm:justify-between gap-2 bg-red-600 hover:bg-red-700 text-white px-3 sm:px-4 py-2 rounded-lg shadow-lg transition font-medium text-xs sm:text-sm">
+            <i class="fa-solid fa-file-pdf hidden sm:inline"></i><span>PDF</span>
         </button>
     </div>
 
