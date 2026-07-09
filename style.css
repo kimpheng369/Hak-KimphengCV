@@ -1612,16 +1612,29 @@ ul {
   
   .contact-wrapper {
     grid-template-columns: 1fr;
+    min-height: auto;
   }
   
   .contact-info-pane {
     border-right: none;
     border-bottom: 1px solid var(--border);
-    padding: 40px;
+    padding: 32px;
   }
   
   .contact-form-pane {
-    padding: 40px;
+    padding: 32px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-input {
+    padding: 12px 14px;
+  }
+  
+  .form-submit-btn {
+    padding: 14px 20px;
   }
 }
 
@@ -1785,12 +1798,28 @@ ul {
     grid-template-columns: 1fr;
   }
 
-  .contact-container {
-    padding: 32px 16px;
+  .contact-wrapper {
+    grid-template-columns: 1fr;
   }
 
-  .contact-heading {
-    font-size: 22px;
+  .contact-info-pane {
+    padding: 24px;
+  }
+
+  .contact-form-pane {
+    padding: 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-input {
+    padding: 12px 14px;
+  }
+
+  .form-submit-btn {
+    padding: 14px 20px;
   }
 
   .skill-bar {
