@@ -47,12 +47,14 @@ html {
   background-color: var(--bg-main);
   color: var(--text-body);
   font-family: var(--font-body);
+  overflow-x: hidden;
 }
 
 body {
   overflow-x: hidden;
   line-height: 1.6;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
@@ -1799,15 +1801,41 @@ ul {
   }
 
   .contact-wrapper {
+    display: grid;
     grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-section,
+  .contact-wrapper,
+  .contact-info-pane,
+  .contact-form-pane,
+  .form-row,
+  .form-group {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-section {
+    overflow-x: hidden;
   }
 
   .contact-info-pane {
-    padding: 24px;
+    padding: 24px 14px;
   }
 
   .contact-form-pane {
-    padding: 24px;
+    padding: 24px 14px;
+  }
+
+  .contact-form {
+    width: 100%;
   }
 
   .form-row {
