@@ -1,5 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Initialize Antigravity Particle Background
+  const container = document.getElementById('antigravity-container');
+  if (container && typeof THREE !== 'undefined' && typeof Antigravity !== 'undefined') {
+    new Antigravity(container, {
+      count: 100,
+      magnetRadius: 17,
+      ringRadius: 12,
+      waveSpeed: 2,
+      waveAmplitude: 1,
+      particleSize: 1.5,
+      lerpSpeed: 0.05,
+      color: '#00fbfc',
+      autoAnimate: true,
+      particleVariance: 1,
+      rotationSpeed: 0,
+      depthFactor: 1,
+      pulseSpeed: 3,
+      particleShape: 'capsule',
+      fieldStrength: 10
+    });
+  }
+
   const mobileToggle = document.querySelector('.mobile-toggle');
   const navMenu = document.querySelector('.nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');

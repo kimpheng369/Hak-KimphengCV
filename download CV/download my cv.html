@@ -60,32 +60,21 @@
                 font-size: 12px;
                 line-height: 1.4;
             }
-            .no-print {
-                bottom: 8px !important;
-                right: 8px !important;
-                gap: 6px !important;
-            }
-            .no-print button {
-                padding: 8px 12px !important;
-                font-size: 11px !important;
-                flex: 1;
-                min-width: 90px;
-            }
-            .no-print i {
-                display: none;
-            }
         }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased py-8 px-3 sm:py-12 sm:px-4 md:px-0">
 
     <!-- Download Buttons Bar -->
-    <div class="no-print fixed bottom-4 left-4 right-4 z-50 flex gap-2 sm:bottom-auto sm:top-4 sm:right-4 sm:left-auto">
-        <button onclick="downloadPNG()" class="flex-1 sm:flex-none flex items-center justify-center sm:justify-between gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-3 sm:px-4 py-2 rounded-lg shadow-lg transition font-medium text-xs sm:text-sm">
-            <i class="fa-solid fa-image hidden sm:inline"></i><span>PNG</span>
+    <div class="no-print fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2.5 bg-slate-900/90 backdrop-blur-md px-3.5 py-2 rounded-full shadow-2xl border border-slate-800/80 w-[90%] max-w-[320px] sm:bottom-auto sm:top-6 sm:right-6 sm:left-auto sm:translate-x-0 sm:w-auto">
+        <button onclick="downloadPNG()" class="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-full shadow-lg shadow-indigo-600/20 transition-all duration-300 font-semibold text-xs sm:text-sm hover:scale-105 active:scale-95">
+            <i class="fa-solid fa-image text-indigo-200"></i>
+            <span>PNG</span>
         </button>
-        <button onclick="downloadPDF()" class="flex-1 sm:flex-none flex items-center justify-center sm:justify-between gap-2 bg-red-600 hover:bg-red-700 text-white px-3 sm:px-4 py-2 rounded-lg shadow-lg transition font-medium text-xs sm:text-sm">
-            <i class="fa-solid fa-file-pdf hidden sm:inline"></i><span>PDF</span>
+        <div class="w-px h-5 bg-slate-800"></div>
+        <button onclick="downloadPDF()" class="flex-1 sm:flex-none flex items-center justify-center gap-2 bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded-full shadow-lg shadow-red-600/20 transition-all duration-300 font-semibold text-xs sm:text-sm hover:scale-105 active:scale-95">
+            <i class="fa-solid fa-file-pdf text-red-200"></i>
+            <span>PDF</span>
         </button>
     </div>
 
@@ -223,18 +212,6 @@
                             </div>
                         </div>
 
-                        <!-- Android Ecosystem -->
-                        <div class="p-3 bg-slate-50/40 rounded-xl border border-slate-100/80">
-                            <span class="text-xs font-bold text-slate-900 uppercase tracking-wider block text-indigo-600 mb-2">Android Architecture Pattern</span>
-                            <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-700">
-                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm"><i class="fa-solid fa-sitemap text-slate-500 text-[11px]"></i>MVVM Architecture</span>
-                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm">ViewModel</span>
-                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm">View Binding</span>
-                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm">LiveData</span>
-                                <span class="bg-white px-2.5 py-1 rounded border border-slate-200 flex items-center gap-1.5 shadow-sm">Navigation Component</span>
-                            </div>
-                        </div>
-
                         <!-- Environments & Data -->
                         <div class="p-3 bg-slate-50/40 rounded-xl border border-slate-100/80">
                             <span class="text-xs font-bold text-slate-900 uppercase tracking-wider block text-indigo-600 mb-2">Environments & Data</span>
@@ -301,7 +278,31 @@
                     <i class="fa-solid fa-award text-indigo-600"></i>Verified Industry Credentials
                 </h2>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-5 text-xs">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-5 text-xs">
+                    <!-- Cisco Block -->
+                    <div class="p-4 bg-slate-50/80 rounded-xl border border-slate-100">
+                        <div class="flex items-center gap-2 border-b border-slate-200/60 pb-2 mb-2">
+                            <i class="fa-solid fa-network-wired text-cyan-600 text-base"></i>
+                            <span class="font-bold text-slate-900 uppercase tracking-wider">Cisco Academy</span>
+                        </div>
+                        <ul class="space-y-1.5 text-slate-600 font-medium list-none pl-0">
+                            <li class="flex items-start gap-1">
+                                <span class="text-cyan-500">•</span>
+                                <div>
+                                    <span>IT Essentials: PC Hardware &amp; Software</span>
+                                    <a href="https://www.credly.com/badges/b288d046-2e61-45ce-94d6-18f8e90ebf51" target="_blank" class="text-cyan-600 hover:underline text-[10px] block font-mono">Credly Verified Badge</a>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-1">
+                                <span class="text-cyan-500">•</span>
+                                <div>
+                                    <span>Learn-A-Thon 2025 Achievement Award</span>
+                                    <span class="text-slate-400 text-[10px] block">Oct 2025 Recognition</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
                     <!-- AWS Block -->
                     <div class="p-4 bg-slate-50/80 rounded-xl border border-slate-100">
                         <div class="flex items-center gap-2 border-b border-slate-200/60 pb-2 mb-2">
@@ -343,13 +344,7 @@
                 </div>
             </div>
 
-    <!-- Floating Print Button (Hidden during Print) -->
-    <div class="fixed bottom-6 right-6 no-print z-50">
-        <button onclick="window.print()" class="flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
-            <i class="fa-solid fa-print"></i>
-            <span>Print or Save PDF</span>
-        </button>
-    </div>
+
 
     <script>
         // Download CV as PNG
