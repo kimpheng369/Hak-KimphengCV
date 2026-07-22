@@ -57,17 +57,45 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileToggle = document.querySelector('.mobile-toggle');
   const navMenu = document.querySelector('.nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
+  const navOverlay = document.getElementById('nav-overlay');
 
-  mobileToggle.addEventListener('click', () => {
-    mobileToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
-  });
+  function openMobileNav() {
+    if (mobileToggle) mobileToggle.classList.add('active');
+    if (navMenu) navMenu.classList.add('active');
+    if (navOverlay) navOverlay.classList.add('active');
+    document.body.classList.add('menu-open');
+  }
+
+  function closeMobileNav() {
+    if (mobileToggle) mobileToggle.classList.remove('active');
+    if (navMenu) navMenu.classList.remove('active');
+    if (navOverlay) navOverlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  }
+
+  if (mobileToggle) {
+    mobileToggle.addEventListener('click', () => {
+      const isOpen = navMenu && navMenu.classList.contains('active');
+      if (isOpen) {
+        closeMobileNav();
+      } else {
+        openMobileNav();
+      }
+    });
+  }
+
+  if (navOverlay) {
+    navOverlay.addEventListener('click', closeMobileNav);
+  }
 
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileToggle.classList.remove('active');
-      navMenu.classList.remove('active');
-    });
+    link.addEventListener('click', closeMobileNav);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) {
+      closeMobileNav();
+    }
   });
 
   // Sticky header class updates on scroll
