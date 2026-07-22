@@ -239,4 +239,12 @@ class Antigravity {
     this.mesh.instanceMatrix.needsUpdate = true;
     this.renderer.render(this.scene, this.camera);
   }
+
+  updateColor(newColorHex) {
+    this.color = newColorHex;
+    if (this.mesh && this.mesh.material) {
+      this.mesh.material.color.set(newColorHex);
+      this.mesh.material.needsUpdate = true;
+    }
+  }
 }
